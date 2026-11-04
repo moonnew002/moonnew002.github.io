@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-  
-
-    <title>Erick Luna | Ingeniero de software y desarrollador eeb</title>
+    
+    <title>Erick Luna | Ingeniero de Software y Desarrollador Web</title>
     <meta name="description" content="Portafolio de Erick Luna, Ingeniero de Software en CDMX. Experiencia en desarrollo web, C++ y automatización.">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#541e69">
+    <meta name="theme-color" content="#523874">
     <link rel="icon" type="image/jpg" href="/icons/moon.png">
     <link rel="canonical" href="https://erickluna.dev">
 
@@ -17,7 +16,6 @@
     <meta property="og:title" content="Erick Luna | Portafolio Web">
     <meta property="og:description" content="Ingeniero de Software y Desarrollador Web. Descubre mis proyectos y experiencia profesional.">
     <meta property="og:image" content="https://erickluna.dev/imagenes/tu-imagen-opengraph.jpg"> 
-    
   </head>
   <body>
     <header class="header-principal">
@@ -26,71 +24,61 @@
           <li class="nav__item"><a href="#inicio">Inicio</a></li>
           <li class="nav__item"><a href="#experiencia">Experiencia</a></li>
           <li class="nav__item"><a href="#proyectos">Proyectos</a></li>
+          <li class="nav__item"><a href="#habilidades">Habilidades</a></li>
           <li class="nav__item"><a href="#sobre-mi">Sobre mí</a></li>
-           <!--Falta incorporar, contacto y el tema de noche/dia-->
         </ul>
       </nav>
     </header>
     <main>
+      
+      <!-- SECCIÓN INICIO -->
       <article id="inicio" class="wrapper">
-        <header class="header-acerca">
-          <h2 class="inicio__titulo">Hola, soy <strong>Erick Luna</strong></h2>
-          <p class="inicio__disponibilidad efecto-cristal">Disponible para trabajar</p>
-        </header>
-        <p class="acerca__parrafo">+1 Año de experiencia. Desarrollador de software y web. De Ciudad de México, México. Busco mi primera oportunidad profesional para sumar crecimiento de una organización. Estoy preparado para asumir nuevos retos, aportar una perspectiva fresca y estoy muy comprometido a seguir desarrollándome profesionalmente dentro de su equipo.</p>
+        <div class="experimental">
+          <div class="photo">
+            <img class="inicio__foto" src="/imagenes/yo.jpg" alt="Foto de perfil de Erick Luna">
+          </div>
+          <header class="header-acerca">
+            <h1 class="inicio__titulo titulos">Hola, soy <strong>Erick Luna</strong></h1>
+            <span class="inicio__disponibilidad efecto-cristal">Disponible para trabajar</span>
+          </header>
+        </div>
+        <p class="acerca__parrafo">Estudiante de Ingeniería en Computación (UAM) con experiencia práctica en desarrollo de software, web y sistemas embebidos. Busco mi primera oportunidad como becario para aportar valor y seguir creciendo profesionalmente.</p>
+        
         <div class="social">
+            <a href="/cv_noviembre_2026.pdf" download class="social__enlaces boton-cv">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /><path d="M7 11l5 5l5 -5" /><path d="M12 4l0 12" /></svg>
+              Descargar CV
+            </a>
             <a href="https://github.com/moonnew002" target="_blank" rel="noopener noreferrer" class="social__enlaces efecto-cristal">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="acerca__icono">
-	            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-	            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
               </svg>
-            GitHub
+              GitHub
             </a>
-          
-            <a href="mailto:mauriciolunadejesus457@gmail.com" target="_blank" rel="noopener noreferrer" class="social__enlaces efecto-cristal">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="acerca__icono">
-	            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-	            <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
-	            <path d="M3 7l9 6l9 -6" />
-            </svg>
-            Contáctame</a>
         </div>
       </article>
+
+      <!-- SECCIÓN EXPERIENCIA -->
       <section id="experiencia" class="wrapper">
         <div class="contenedor-secciones">
-          <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-briefcase">
-	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-	<path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -9" />
-	<path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
-	<path d="M12 12l0 .01" />
-	<path d="M3 13a20 20 0 0 0 18 0" />
-</svg>
-
-        <h2>Experiencia laboral</h2>
+          <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-briefcase"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -9" /><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" /><path d="M12 12l0 .01" /><path d="M3 13a20 20 0 0 0 18 0" /></svg>
+          <h2 class="titulos">Experiencia</h2>
         </div>
         <div class="timeline__contenedor">
-          <div class="timeline__linea"></div> <!--aquí dentro está la línea y los puntos-->
-          <div class="timeline__contenido"> <!--contiene toda la experiencia -->
+          <div class="timeline__linea"></div> 
+          <div class="timeline__contenido">
+            
             <article class="timeline__item">
               <div class="timeline__punto"></div>
               <div class="experiencia__tarjeta">
                 <h3 class="experiencia__titulo">Sistema de iluminación automatizado para maqueta</h3>
-                <span class="experiencia__empresa">Taller de arquitectura</span>
-                <span class="experiencia__fecha">Presente</span>
+                <span class="experiencia__empresa">Taller de Cuatro Cuartos</span>
+                <span class="experiencia__fecha">Agosto 2026 - Octubre 2026</span>
               </div>
-              <p class="experiencia__descripcion efecto-cristal">Actualmente me encuentro diseñando la arquitectura en C++ de un sistema de iluminación para una maqueta arquitectónica con escala 1:150 del hotel <strong>Ritz Carlton Nizuc</strong>. Implementado con el microcontrolador ESP32-S3, LEDs WS2815 y mediante un panel web de control.</p>
+              <p class="experiencia__descripcion efecto-cristal">Lideré el desarrollo completo del sistema de iluminación para la maqueta arquitectónica del hotel Ritz Carlton Nizuc. Diseñé la arquitectura en <strong>C++</strong> sobre un microcontrolador <strong>ESP32-S3</strong> (PlatformIO) para controlar más de 600 LEDs <strong>WS2815</strong> divididos en 6 zonas independientes mediante un panel de control web. Diseñé la <strong>PCB</strong> y la etapa de regulación de voltaje. Incluyó creación de un panel modular, pruebas remotas vía <strong>VPN (Tailscale)</strong> y la generación del manual técnico de operación.</p>
             </article>
 
-           <!-- <article class="timeline__item">
-              <div class="timeline__punto"></div>
-              <div class="experiencia__tarjeta">
-                <h3 class="experiencia__titulo">Sitio web para mudanza</h3>
-                <span class="experiencia__empresa">Mudanzas Jimenez</span>
-                <span class="experiencia__fecha">Enero 2026 - Marzo 2026</span>
-              </div>
-              <p class="experiencia__descripcion efecto-cristal">Desarrollé una landing page responsiva para una empresa de mudanzas utilizando HTML5, CSS3 (Flexbox y Grid) y JavaScript Vanilla. Diseñé e implementé un cotizador interactivo que procesa solicitudes de forma asíncrona (Fetch API) y las envía por correo electrónico mediante un backend en PHP integrado con PHPMailer, configurado bajo el estándar SMTP para garantizar la entregabilidad y la seguridad de los datos</p>
-      -->
-            </article>
             <article class="timeline__item">
               <div class="timeline__punto"></div>
               <div class="experiencia__tarjeta">
@@ -98,129 +86,113 @@
                 <span class="experiencia__empresa">UAM Azcapotzalco</span>
                 <span class="experiencia__fecha">Diciembre 2023 – Marzo 2024</span>
               </div>
-              <p class="experiencia__descripcion efecto-cristal">Simplifiqué conceptos complejos de cálculo diferencial e integral para grupos de más de 4 estudiantes por semana, mejorando su comprensión y rendimiento académico. Desarrollé habilidades de comunicación clara y resolución de problemas, adaptando mi lenguaje técnico según el nivel de conocimiento de cada estudiante.</p>
+              <p class="experiencia__descripcion efecto-cristal">Simplifiqué conceptos complejos de cálculo diferencial e integral para grupos de estudiantes, mejorando su comprensión y rendimiento académico. Desarrollé habilidades clave de comunicación técnica, adaptando la resolución de problemas lógicos según el nivel de conocimiento del usuario final.</p>
             </article>
 
           </div>
         </div>
       </section>
+
+      <!-- SECCIÓN PROYECTOS -->
       <section id="proyectos" class="wrapper">
         <div class="contenedor-secciones">
           <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-folder"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2" /></svg>
-          <h2>Proyectos</h2>
+          <h2 class="titulos">Proyectos</h2>
         </div>
+        
         <article class="proyecto__item">
-          <img class="proyecto__img" src="/imagenes/proyecto-recetario.png">
+          <img class="proyecto__img" src="/imagenes/proyecto-recetario.png" alt="Vista previa del generador de recetas">
           <div class="proyecto__tarjeta">
             <h3 class="proyecto__titulo">Generador móvil de recetas dentales</h3>
             <div class="proyecto__tecnologias">
-              <ul>
-                <li class="proyecto__tecnologia">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-html"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" /><path d="M2 21v-6" /><path d="M5 15v6" /><path d="M2 18h3" /><path d="M20 15v6h2" /><path d="M13 21v-6l2 3l2 -3v6" /><path d="M7.5 15h3" /><path d="M9 15v6" /></svg>
-                </li>
-                <li class="proyecto__tecnologia">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-css"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" /><path d="M8 16.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" /><path d="M11 20.25c0 .414 .336 .75 .75 .75h1.25a1 1 0 0 0 1 -1v-1a1 1 0 0 0 -1 -1h-1a1 1 0 0 1 -1 -1v-1a1 1 0 0 1 1 -1h1.25a.75 .75 0 0 1 .75 .75" /><path d="M17 20.25c0 .414 .336 .75 .75 .75h1.25a1 1 0 0 0 1 -1v-1a1 1 0 0 0 -1 -1h-1a1 1 0 0 1 -1 -1v-1a1 1 0 0 1 1 -1h1.25a.75 .75 0 0 1 .75 .75" /></svg>
-                </li>
-                <li class="proyecto__tecnologia">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-js">
-	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-	<path d="M14 3v4a1 1 0 0 0 1 1h4" />
-	<path d="M3 15h3v4.5a1.5 1.5 0 0 1 -3 0" />
-	<path d="M9 20.25c0 .414 .336 .75 .75 .75h1.25a1 1 0 0 0 1 -1v-1a1 1 0 0 0 -1 -1h-1a1 1 0 0 1 -1 -1v-1a1 1 0 0 1 1 -1h1.25a.75 .75 0 0 1 .75 .75" />
-	<path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-1" />
-</svg>
-                </li>
+              <ul class="skills-list">
+                <li class="skill-tag">HTML5</li>
+                <li class="skill-tag">CSS Grid</li>
+                <li class="skill-tag">JavaScript</li>
               </ul>             
             </div>
-            <p class="proyecto__parrafo">Aplicación web responsiva (mobile-first) diseñada para la creación y exportación instantánea de recetas médicas en formato PDF. Desarrollada con JavaScript puro, CSS Grid y maquetación semántica, eliminando por completo la necesidad de un servidor backend.</p>
+            <p class="proyecto__parrafo">Aplicación web responsiva (mobile-first) para la creación y exportación instantánea de recetas médicas en PDF. Desarrollada con JavaScript puro eliminando la necesidad de un servidor backend.</p>
             <div class="proyecto__enlaces">
-              <a class="proyecto__enlace" href="https://github.com/moonnew002/recetario" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>GitHub</a>
-              <a class="proyecto__enlace" href="https://erickluna.dev/recetario/" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg>Preview</a>
-            </div>
-          </div>
-        </article>
-        <article class="proyecto__item">
-          <img class="proyecto__img" src="/imagenes/proyecto-automatizacion.png">
-          <div class="proyecto__tarjeta">
-            <h3 class="proyecto__titulo">Automatización de gestión de redes mediante Python y Netmiko</h3>
-            <div class="proyecto__tecnologias">
-              <ul>
-                <li class="proyecto__tecnologia">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-python">
-	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-	<path d="M12 9h-7a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h3" />
-	<path d="M12 15h7a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-3" />
-	<path d="M8 9v-4a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v5a2 2 0 0 1 -2 2h-4a2 2 0 0 0 -2 2v5a2 2 0 0 0 2 2h4a2 2 0 0 0 2 -2v-4" />
-	<path d="M11 6l0 .01" />
-	<path d="M13 18l0 .01" />
-</svg>Python
-                </li>
- 
-                
-              </ul>             
-            </div>
-            <p class="proyecto__parrafo">Desarrollo de un sistema de automatización para la administración y configuración masiva de dispositivos de red (Cisco IOS) en entornos con protocolos heredados, optimizando la gestión de inventarios y reduciendo los tiempos de configuración manual.</p>
-            <div class="proyecto__enlaces">
-              <a href="https://github.com/moonnew002/script-network-Telnet" target="_blank" rel="noopener noreferrer" class="proyecto__enlace"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>GitHub</a>
-            <div>
-          </div>
-        </article>
-        <article class="proyecto__item">
-          <img class="proyecto__img" src="/imagenes/proyecto-portafolio.png">
-          <div class="proyecto__tarjeta">
-            <h3 class="proyecto__titulo">Portafolio web</h3>
-            <div class="proyecto__tecnologias">
-              <ul>
-                <li class="proyecto__tecnologia"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-html"><path stroke="none" d="M0 0h24v24H0z" fill="none" />
-	<path d="M14 3v4a1 1 0 0 0 1 1h4" />
-	<path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
-	<path d="M2 21v-6" />
-	<path d="M5 15v6" />
-	<path d="M2 18h3" />
-	<path d="M20 15v6h2" />
-	<path d="M13 21v-6l2 3l2 -3v6" />
-	<path d="M7.5 15h3" />
-	<path d="M9 15v6" />
-</svg>
-                </li>
-                <li class="proyecto__tecnologia">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-css">
-	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-	<path d="M14 3v4a1 1 0 0 0 1 1h4" />
-	<path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4" />
-	<path d="M8 16.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" />
-	<path d="M11 20.25c0 .414 .336 .75 .75 .75h1.25a1 1 0 0 0 1 -1v-1a1 1 0 0 0 -1 -1h-1a1 1 0 0 1 -1 -1v-1a1 1 0 0 1 1 -1h1.25a.75 .75 0 0 1 .75 .75" />
-	<path d="M17 20.25c0 .414 .336 .75 .75 .75h1.25a1 1 0 0 0 1 -1v-1a1 1 0 0 0 -1 -1h-1a1 1 0 0 1 -1 -1v-1a1 1 0 0 1 1 -1h1.25a.75 .75 0 0 1 .75 .75" /></svg>
-                </li>
-                <li class="proyecto__tecnologia">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-file-type-js">
-	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-	<path d="M14 3v4a1 1 0 0 0 1 1h4" />
-	<path d="M3 15h3v4.5a1.5 1.5 0 0 1 -3 0" />
-	<path d="M9 20.25c0 .414 .336 .75 .75 .75h1.25a1 1 0 0 0 1 -1v-1a1 1 0 0 0 -1 -1h-1a1 1 0 0 1 -1 -1v-1a1 1 0 0 1 1 -1h1.25a.75 .75 0 0 1 .75 .75" />
-	<path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-1" />
-</svg>
-                </li>
-              </ul>             
-            </div>
-            <p class="proyecto__parrafo">Portafolio basado en web desarrollado con JavaScript puro, CSS (Flexbox, Grid) y maquetación semántica.</p>
-            <div class="proyecto__enlaces">
-              <a class="proyecto__enlace" target="_blank" rel="noopener noreferrer" href="https://github.com/moonnew002/moonnew002.github.io"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>Github</a>
-              <a class="proyecto__enlace" target="_blank" rel="noopener noreferrer" href="https://erickluna.dev/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg>Preview</a>
+              <a class="proyecto__enlace efecto-cristal" href="https://github.com/moonnew002/recetario" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="proyecto__enlace efecto-cristal" href="https://erickluna.dev/recetario/" target="_blank" rel="noopener noreferrer">Preview</a>
             </div>
           </div>
         </article>
 
+        <article class="proyecto__item">
+          <img class="proyecto__img" src="/imagenes/proyecto-automatizacion.png" alt="Terminal mostrando script de Python">
+          <div class="proyecto__tarjeta">
+            <h3 class="proyecto__titulo">Automatización de gestión de redes</h3>
+            <div class="proyecto__tecnologias">
+              <ul class="skills-list">
+                <li class="skill-tag">Python</li>
+                <li class="skill-tag">Netmiko</li>
+                <li class="skill-tag">Cisco IOS</li>
+              </ul>             
+            </div>
+            <p class="proyecto__parrafo">Desarrollo de un sistema de automatización para la administración y configuración masiva de dispositivos de red en entornos con protocolos heredados, optimizando inventarios y reduciendo tiempos.</p>
+            <div class="proyecto__enlaces">
+              <a href="https://github.com/moonnew002/script-network-Telnet" target="_blank" rel="noopener noreferrer" class="proyecto__enlace efecto-cristal">GitHub</a>
+            </div>
+          </div>
+        </article>
       </section>
+
+      <!-- SECCIÓN HABILIDADES (NUEVA) -->
+      <section id="habilidades" class="wrapper">
+        <h2 class="titulos">Habilidades y tecnologías</h2>
+        <div class="skills-container">
+          <div class="skill-category efecto-cristal">
+            <h3>Lenguajes</h3>
+            <div class="skills-list">
+              <span class="skill-tag">C/C++</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">HTML5 / CSS3</span>
+            </div>
+          </div>
+          <div class="skill-category efecto-cristal">
+            <h3>Herramientas & Hardware</h3>
+            <div class="skills-list">
+              <span class="skill-tag">Git / GitHub</span>
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">ESP32 / PlatformIO</span>
+              <span class="skill-tag">Diseño PCB</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN SOBRE MÍ -->
       <section id="sobre-mi" class="wrapper">
-        <h2 class="sobre-mi__titulo">Sobre mí</h2>
-        <p class="sobre-mi__parrafo">Me llamo Erick Mauricio Luna De Jesús pero mis amigos me dicen Miawricio. Tuve mi primer acercamiento con la programación desde que iba en la preparatoria (2015) programando en Visual Studio. Actualmente me encuentro estudiando el 11.º trimestre de Ingeniería en Computación en la UAM Azcapotzalco. Algunos de mis pasatiempos favoritos son jugar Overwatch y tocar el piano, actividades que reflejan mi lado creativo.
-        </p>
+        <h2 class="titulos">Sobre mí</h2>
+        <div class="sobre-mi__contenido efecto-cristal">
+          <p class="sobre-mi__parrafo">
+            Soy estudiante de Ingeniería en Computación en la UAM Azcapotzalco, apasionado por resolver problemas reales a través de la tecnología. Mi experiencia abarca desde el desarrollo web frontend hasta la programación de bajo nivel para sistemas embebidos y la automatización de redes. 
+          </p>
+          <p class="sobre-mi__parrafo">
+            Disfruto tender puentes entre el hardware y el software. Actualmente estoy en búsqueda de una oportunidad como becario (Desarrollo de Software, Soporte TI, QA o Sistemas Embebidos) donde pueda aportar mi capacidad analítica y seguir perfeccionando mis habilidades técnicas en un entorno profesional.
+          </p>
+        </div>
       </section>
+
+      <!-- SECCIÓN CONTACTO (NUEVA) -->
+      <section id="contacto" class="wrapper">
+        <h2 class="titulos">¿Trabajamos juntos?</h2>
+        <p class="acerca__parrafo" style="text-align: center;">Si tienes una vacante o un proyecto en mente, me encantaría platicar contigo.</p>
+        <div class="social" style="margin-top: 20px;">
+          <a href="mailto:mauriciolunadejesus457@gmail.com" class="social__enlaces boton-cv">
+            Envíame un correo
+          </a>
+          <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" class="social__enlaces efecto-cristal">
+            LinkedIn
+          </a>
+        </div>
+      </section>
+
     </main>
     <footer>
       <p>© 2026 Erick Luna. Diseñado y desarrollado con dedicación.</p>
     </footer>
-    
   </body>
 </html>

@@ -1,48 +1,57 @@
-:root{
-  --color-principal: #fdf6ee;
-  --color-texto: #233f29;
-  --color-acento-secundario: #eff392;
-  --color-acento-primario: #a9acd9;
+:root {
+  /* Paleta base corregida y ampliada */
+  --color-principal: #3a2254; /* Un morado ligeramente más oscuro y elegante para mejorar contraste */
+  --color-texto: #eafbcc;
+  --color-texto-claro: #ffffff; /* Faltaba esta variable */
+  --color-secundario: #684882;
+  --color-borde: #dc7d68;
+  --color-acento-primario: #ec7744;
+  --color-acento: #ff9a70; /* Faltaba esta variable */
+  
   --espaciado-pequeno: 15px;
-  /* --categoria__elemento */
   --pading-textos: 15px;
   --radio-borde: 12px;
 }
 
+@font-face {
+  font-family: 'evangelion-titulos';
+  src: url('fonts/reserve-condensed-semi-bold.ttf') format('truetype');
+  font-display: swap;
+}
 
-body{
+html {
+  scroll-behavior: smooth; /* Navegación fluida al hacer click en el menú */
+}
+
+body {
   box-sizing: border-box;
   background: var(--color-principal);
-  background-attachment: fixed; /* El fondo no se mueve al hacer scroll, se ve más fluido */
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; /* Tipografía limpia y moderna */
+  background-attachment: fixed;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   margin: 0px;
   font-size: 16px;
-  line-height: 1.6; /* Mejora la lectura de párrafos largos */
+  line-height: 1.6;
+  color: var(--color-texto-claro); /* Asegura que por defecto el texto sea legible */
 }
 
-ul{
+ul, li {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-li{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-a{
+a {
   text-decoration: none;
-  color: black;
+  color: var(--color-texto-claro); /* Corregido: antes estaba en black */
+  transition: color 0.3s ease;
 }
 
-h2{
-  /* máximo: 3rem, mínimo: 1.5rem */
-  font-size: clamp(1.3rem, 2vw + 1rem, 2.3rem);
+a:hover {
+  color: var(--color-acento);
 }
 
-.header-principal{
+/* NAVEGACIÓN */
+.header-principal {
   display: flex;
   width: 100%;
   height: 70px;
@@ -50,346 +59,352 @@ h2{
   top: 0px;
   right: 0px;
   box-sizing: border-box;
-  z-index: 1;
+  z-index: 10;
+  backdrop-filter: blur(15px); 
+  background-color: rgba(58, 34, 84, 0.8); /* Fondo semi-transparente para legibilidad */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
-.header-principal__nav{
+.header-principal__nav {
   flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background-color: var(--color-secundario); 
-  
-  backdrop-filter: blur(15px); 
-  
-  /*border: 1px solid rgba(255, 255, 255, 0.5);*/
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-.nav-list{
+.nav-list {
   display: flex;
   justify-content: center;
   gap: var(--espaciado-pequeno);
   box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
-
-
-.nav__item{
+.nav__item a {
   color: var(--color-texto);
+  font-family: 'evangelion-titulos', Times, serif, sans-serif;
+  font-size: 1.1rem;
 }
 
-.nav__item a:visited {
-  color: var(--color-texto);
-}
-main{
+/* CONTENEDOR PRINCIPAL */
+main {
   width: 100%;
-  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 20px;
   box-sizing: border-box;
-  margin-bottom: 30px;
-
+  margin-bottom: 50px;
+  gap: 80px; /* Separación consistente entre secciones */
 }
 
-.wrapper{
-  max-width: 1000px;
-  box-sizing: border-box;
-}
-
-.contenedor-secciones{
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-
-.header-acerca{
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--espaciado-pequeno);
-  align-items: center;
+.wrapper {
   width: 100%;
-}
-
-.fondo-inicio{
-  width: 100%;
+  max-width: 900px;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding-top: 30px;
 }
 
-#inicio{
-  height: calc(100vh - 70px);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.inicio__titulo{
- /*(mínimo, ideal, máximo*/
-  font-size: clamp(2rem, 2vw + 1rem, 5rem);
+/* TIPOGRAFÍA */
+.titulos {
   color: var(--color-texto);
-  margin: 0;
+  font-size: clamp(2rem, 3vw + 1rem, 4rem);
+  font-family: 'evangelion-titulos', sans-serif;
+  margin-bottom: 20px;
 }
 
-.inicio__disponibilidad{
+/* SECCIÓN INICIO */
+#inicio {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.experimental {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.photo {
+  flex-shrink: 0;
+  width: clamp(120px, 20vw, 200px);
+  height: clamp(120px, 20vw, 200px);
+  border-radius: 50%;
+  border: 3px solid var(--color-acento-primario);
+  overflow: hidden;
+}
+
+.inicio__foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-acerca {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.inicio__titulo {
+  margin: 0;
+  line-height: 1.1;
+}
+
+.inicio__disponibilidad {
   margin: 0;
   font-size: 0.9rem;
   font-weight: 700;
   border-radius: var(--radio-borde);
-  padding: 4px 12px;
-
-  color: black;
+  padding: 6px 14px;
+  color: white;
   background: var(--color-acento-primario);
   letter-spacing: 0.5px;
 }
 
-.acerca__parrafo{
-  box-sizing: border-box;
-  font-size: clamp(1rem, 0.952vw + 0.785rem, 1.5rem);
-  color: var(--eva-light);
+.acerca__parrafo {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: var(--color-texto-claro);
+  max-width: 800px;
 }
 
-.social{
+.social {
   display: flex;
-  justify-content: center;
-  gap: 15px
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
 }
 
-
-
-.social__enlaces{
+.social__enlaces {
   border-radius: var(--radio-borde);
-  background: var(--color-acento-primario);
-  padding: 5px;
+  padding: 10px 18px;
   display: flex;
-  gap: 5px;
+  gap: 8px;
   align-items: center;
-  color: black;
+  font-weight: bold;
 }
 
-.acerca__icono{
-  height: 40px;               /* Aquí definimos el alto */
-  width: 40px;
-  stroke: black; /* Color inicial usando tu variable */
+.boton-cv {
+  background-color: var(--color-texto);
+  color: var(--color-principal) !important;
+  box-shadow: 0 4px 15px rgba(199, 251, 165, 0.3);
+  transition: transform 0.2s ease;
 }
 
-/* Título de la sección */
-/* Clase global para tarjetas y elementos flotantes */
+.boton-cv:hover {
+  transform: scale(1.05);
+}
+
+.acerca__icono {
+  height: 24px;
+  width: 24px;
+  stroke: currentColor;
+}
+
+/* UTILIDAD EFECTO CRISTAL */
 .efecto-cristal {
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08); /* Borde sutil brillante */
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  background-color: rgba(104, 72, 130, 0.4); 
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
   border-radius: var(--radio-borde);
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transición suave para interactividad */
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* Efecto sutil al pasar el mouse por las tarjetas */
 .efecto-cristal:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px 0 var(--color-acento-primario); /* Brillo verde neón muy tenue */
+  transform: translateY(-3px);
+  border-color: var(--color-acento-primario);
 }
 
-/* EXPERIENCIA */
-.timeline__contenedor{ /* separa la líena de la experiencia */
+/* CONTENEDOR TÍTULOS CON ICONO */
+.contenedor-secciones {
   display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.timeline__linea{
-  width: 15px;
+.icon {
+  color: var(--color-texto);
+}
+
+/* EXPERIENCIA (TIMELINE) */
+.timeline__contenedor {
+  display: flex;
+  margin-top: 20px;
+}
+
+.timeline__linea {
+  width: 30px;
   flex-shrink: 0;
   position: relative;
 }
 
-
-
-.timeline__linea::before{ /* esto dibuja la linea*/
+.timeline__linea::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 4px; /* Ajuste milimétrico para centrar la línea con los puntos */
-  width: 4px;
+  left: 10px; 
+  width: 3px;
   height: 100%;
-  background-color: var(--color-acento-primario); /* La línea es verde[cite: 1] */
-  border-radius: 2px;
-  
-}
-
-.timeline__punto{
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  top: 7px; /* medidas por ajustar */
-  left: -15px;
   background-color: var(--color-acento-primario);
+  border-radius: 2px;
 }
 
-.timeline__item{
+.timeline__contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.timeline__item {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 20px;
 }
 
-
-
-.subtitulos{
-  color: var(--eva-green);
+.timeline__punto {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: 5px; 
+  left: -26px;
+  background-color: var(--color-texto);
+  border: 3px solid var(--color-acento-primario);
 }
 
-.experiencia__titulo{
-  font-size: 1.3rem;
-}
-
-.experiencia__empresa{
-  font-size: 1rem;
-  color: black;
-}
-
-.experiencia__fecha{
-  color: black;
-  font-size: 0.8rem;
-}
-
-.experiencia__tarjeta{
+.experiencia__tarjeta {
+  flex: 1 1 250px;
   display: flex;
   flex-direction: column;
-  flex-basis: 300px; /* por ajustar */
-  flex-grow: 1;
-  flex-shrink: 1;
 }
 
-.experiencia__descripcion{
-  color: var(--eva-dark);
-  flex-basis: 600px; /* por ajustar */
-  flex-grow: 1;
-  flex-shrink: 1;
-  box-sizing: border-box;
-  padding: 15px;
-  /* Fondo semitransparente para ver a través de él */
-  background-color: rgba(255, 255, 255, 0.3); 
-  
-  /* Efecto de desenfoque (ajusta los píxeles a tu gusto) */
-  backdrop-filter: blur(15px); 
-  
-  /* Opcional: bordes redondeados y sombra para un mejor diseño */
-  border-radius: var(--radio-borde);
-  /*border: 1px solid rgba(255, 255, 255, 0.5);*/
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+.experiencia__titulo {
+  font-family: 'evangelion-titulos', sans-serif;
+  color: var(--color-texto);
+  font-size: 1.4rem;
+  margin: 0 0 5px 0;
 }
-/* FIN EXPERIENCIA */
+
+.experiencia__empresa {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.experiencia__fecha {
+  color: var(--color-acento);
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.experiencia__descripcion {
+  flex: 2 1 400px;
+  padding: 20px;
+  margin: 0;
+}
 
 /* PROYECTOS */
-
-#proyectos{
-  width: 100%; /* no se porque no se aplicaba */
+.proyecto__item {
   display: flex;
-  flex-direction: column;
   gap: 30px;
-}
-
-.proyectos__tituloprincipal{
-  color: white;
-}
-
-.proyecto__item{
-  display: flex;
-  gap: 15px;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 50px;
 }
 
-.proyecto__img{
-  flex-basis: 400px;
+.proyecto__img {
+  flex: 1 1 350px;
   width: 100%;
-  flex-shrink: 1;
-  flex-grow: 1;
-  /*aspect-ratio: 16/9;*/
   border-radius: var(--radio-borde);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-/*  object-fit: cover; /* Ajusta la imagen rellenando el espacio sin deformarse */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
 }
 
-.proyecto__titulo{
-  color: var(--color-acento)
-}
-
-.proyecto__parrafo{
-  color: var(--color-texto-claro);
-}
-
-.proyecto__tarjeta{
-  flex-grow: 1;
-  flex-basis: 500px;
-}
-
-
-
-
-
-.proyecto__tecnologias > ul{
+.proyecto__tarjeta {
+  flex: 1 1 350px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 15px;
 }
 
-.proyecto__tecnologia{
-  color: var(--color-texto-claro);
-  padding: 5px;
-    /* Fondo semitransparente para ver a través de él */
-  background-color: rgba(255, 255, 255, 0.3); 
-  
-  /* Efecto de desenfoque (ajusta los píxeles a tu gusto) */
-  backdrop-filter: blur(15px); 
-  
-  /* Opcional: bordes redondeados y sombra para un mejor diseño */
-  border-radius: var(--radio-borde);
-  /*border: 1px solid rgba(255, 255, 255, 0.5);*/
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  display: flex;
+.proyecto__titulo {
+  color: var(--color-texto);
+  font-size: 1.5rem;
+  margin: 0;
 }
 
-.proyecto__enlaces{
+.proyecto__enlaces {
   gap: 15px;
   display: flex;
+  margin-top: 10px;
 }
 
-.proyecto__enlace{
+.proyecto__enlace {
+  padding: 8px 16px;
+  font-weight: 600;
   color: var(--color-texto-claro);
   display: flex;
-    padding: 5px;
-  /* Fondo semitransparente para ver a través de él */
-  background-color: rgba(255, 255, 255, 0.3); 
-  
-  /* Efecto de desenfoque (ajusta los píxeles a tu gusto) */
-  backdrop-filter: blur(15px); 
-  
-  /* Opcional: bordes redondeados y sombra para un mejor diseño */
-  border-radius: var(--radio-borde);
-  /*border: 1px solid rgba(255, 255, 255, 0.5);*/
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);;
-}
-
-.sobre-mi__titulo{
-  color: var(--color-texto-claro);
-}
-
-.sobre-mi__parrafo{
-  color: var(--color-texto-claro);
-}
-
-footer{
-  width: 100%;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  gap: 8px;
+}
+
+/* HABILIDADES (NUEVO) */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill-category {
+  flex: 1 1 300px;
+  padding: 20px;
+}
+
+.skill-category h3 {
+  margin-top: 0;
+  color: var(--color-texto);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  background-color: rgba(236, 119, 68, 0.2);
+  border: 1px solid var(--color-acento-primario);
   color: var(--color-texto-claro);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* SOBRE MI */
+.sobre-mi__contenido {
+  padding: 30px;
+}
+
+.sobre-mi__parrafo {
+  margin-bottom: 15px;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  padding: 30px 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
 }
